@@ -18,3 +18,11 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+### Create .env file
+Use the .env.example file as reference
+
+### Run the Application
+```
+python3 rag.py
+```
