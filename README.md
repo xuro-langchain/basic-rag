@@ -6,10 +6,15 @@ Welcome to Basic RAG! This is a very simple RAG application you can use to test 
 
 ## Pre-work
 
-### Clone the RAG 101 repo
+### Clone the Repo
 ```
-git clone https://github.com/langchain-ai/adaptive-rag-101.git
+git clone https://github.com/xuro-langchain/basic-rag
 ```
 
+### Install Dependencies
 Create a python virtual environment and install the dependencies listed in requirements.txt
-
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
