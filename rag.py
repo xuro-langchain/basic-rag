@@ -112,8 +112,21 @@ def rag(question: str):
     answer = "No relevant documents found. Try a different query."
     if approved:
         answer = generate_response(question, filtered_docs)
+        answer = answer.content
     return {"answer": answer}
 
-question = "What is a supervisor architecture?"
-answer = rag(question)
-print(answer["answer"].content)
+def run():
+    print("\nHi! I'm a basic RAG chatbot.\nAsk a question to receive a RAG result. Note: I do not remember previous messages, so ask one question at a time!\n")
+    while True:
+        user = input('User (q to quit): ')
+        if user in {'q', 'Q'}:
+            print('Goodbye!')
+            break
+        
+        question = user
+        answer = rag(question)
+        print(answer["answer"])
+
+
+if __name__ == "__main__":
+    run()
